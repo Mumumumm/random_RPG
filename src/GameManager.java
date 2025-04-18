@@ -18,7 +18,7 @@ public class GameManager {
     }
 
     public void gameStart() {
-        System.out.println("1. 캐릭터 생성후 시작");
+        System.out.println("1. 랜덤 캐릭터 생성하기");
         System.out.println("2. 저장하기");
         System.out.println("3. 저장 불러오기");
         System.out.println("4. 뒤로가기");
@@ -31,7 +31,7 @@ public class GameManager {
 
             switch (selete) {
                 case NEWPLAYER:
-                    System.out.println("캐릭터생성 후 시작됩니다");
+                    System.out.println("캐릭터생성 후 시작됩니다\n");
                     System.out.println("=== 캐릭터 정보 ===");
                     System.out.println("HP : " + charater.getHp());
                     System.out.println("공격력 : " + charater.getStr());
@@ -41,9 +41,10 @@ public class GameManager {
                     System.out.println("===================");
                     System.out.println("1. 게임 시작하기");
                     System.out.println("2. 캐릭터 생성 나가기");
+                    System.out.println("===================");
                     int playSelete = input.nextInt();
                     if(playSelete == 2){
-                        gameStart();
+                        flag = true;
                     }
                     break;
                 case SAVE:
